@@ -2,7 +2,7 @@
 
 This repository contains an opinionated, experience-driven set of principles and practices for operating software systems at scale.
 
-It is not a tutorial on Kubernetes, a configuration guide for Datadog, or an academic treatise on distributed systems. Instead, it is a reflection of what actually breaks in production, how teams behave under pressure, and how reliability is systematically improved over time.
+It isn't a tutorial on Kubernetes, a configuration guide for Datadog, or an academic treatise on distributed systems. Instead, it reflects what actually breaks in production, how teams behave under pressure, and how reliability is systematically improved over time.
 
 The content here is written for senior engineers, hiring managers, and platform/SRE teams. It focuses on:
 
@@ -23,6 +23,6 @@ The documentation is organized by core operational domains:
 
 ## Philosophy
 
-Reliability is not a product you can buy or a tool you can deploy. It is a property of the socio-technical system—the combination of software, infrastructure, and the humans who operate them.
+Reliability isn't a product you can buy or a tool you can deploy. It's a property of the socio-technical system—the combination of software, infrastructure, and the humans who operate them.
 
 Tools change. Cloud providers change. But the fundamental challenges of operating complex systems—coordinating humans, defining boundaries, maintaining psychological safety, and managing risk—remain constant.
