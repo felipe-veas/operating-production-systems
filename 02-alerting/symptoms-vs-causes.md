@@ -2,9 +2,9 @@
 
 ## The Reality of Production Signals
 
-When a user clicks "Add to Cart" and the request fails, they experience a symptom: the application is broken. Under the hood, the cause might be a database deadlock, a Redis connection timeout, a network partition, or a bad code deployment. The reality of complex systems is that a single symptom (user impact) can be triggered by dozens, if not hundreds, of different underlying causes.
+When a user clicks "Add to Cart" and the request fails, they experience a symptom: the application is broken. Under the hood, the cause might be a database deadlock, a Redis connection timeout, a network partition, or a bad code deployment. In complex systems, a single symptom (user impact) can be triggered by dozens, if not hundreds, of different underlying causes.
 
-## Where Teams Go Wrong
+## Where We Go Wrong
 
 The instinct of most engineers is to alert on causes. They write a query to monitor the `cart_db` connection pool. If it exceeds 80% capacity, they fire an alert. Then they write an alert for Redis memory. Then an alert for the RabbitMQ queue length.
 
@@ -20,7 +20,7 @@ They attempt to enumerate every possible failure mode of their infrastructure an
 
 A mature operational model shifts entirely to **symptom-based alerting**. You alert on what the user experiences, not the health of the underlying components.
 
-1. **The Golden Signals:** Focus alerting on Latency (how long requests take), Traffic (how much demand is on the system), Errors (rate of failed requests), and Saturation (how "full" the system is, though this borders on cause).
+1. **The Golden Signals:** Focus alerting on Latency (how long requests take), Traffic (how much demand is on the system), Errors (rate of failed requests), and Saturation (how "full" the system is).
 2. **Alert on the Boundary:** If the checkout service has a 5% error rate, that is a symptom. Page the on-call engineer. It doesn't matter *why* it's failing at 3:00 AM; it only matters that it *is* failing and requires human intervention.
 3. **Dashboards are for Causes:** Once the engineer is paged for the symptom (High Error Rate), they open a dashboard to find the cause. The dashboard shows the database CPU, the Redis memory, and the queue lengths. The alert tells you *that* you are broken; the dashboard tells you *why*.
 
