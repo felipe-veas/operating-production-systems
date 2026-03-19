@@ -1,28 +1,28 @@
 # Operating Production Systems
 
-This repository contains an opinionated, experience-driven set of principles and practices for operating software systems at scale.
+This repository contains an opinionated, practical set of principles for operating software systems at scale.
 
-It isn't a tutorial on Kubernetes, a configuration guide for Datadog, or an academic treatise on distributed systems. Instead, it reflects what actually breaks in production, how teams behave under pressure, and how reliability is systematically improved over time.
+This is not a Kubernetes tutorial, a Datadog configuration guide, or an academic paper on distributed systems. It documents what actually breaks in production, how engineering teams behave under pressure, and how to systematically improve reliability.
 
-The content here is written for senior engineers, hiring managers, and platform/SRE teams. It focuses on:
+This content is built for senior engineers, platform teams, and SREs. It focuses on:
 
 - Tradeoffs in system design and operational models.
-- Operational risk and human factors.
-- Coordination, escalation, and decision-making during incidents.
+- Managing operational risk and human factors.
+- Coordination, escalation, and decision-making during critical incidents.
 
 ## Structure
 
 The documentation is organized by core operational domains:
 
-- **[01. Incident Response](./01-incident-response/)**: Structuring chaos, managing severity, and effective coordination.
-- **[02. Alerting](./02-alerting/)**: Designing actionable signals, preventing alert fatigue, and focusing on symptoms over causes.
-- **[03. Postmortems](./03-postmortems/)**: Extracting organizational learning through blameless investigations and rigorous action items.
-- **[04. Operational Load](./04-operational-load/)**: Managing toil, tribal knowledge, and ensuring a sustainable on-call experience.
-- **[05. Ownership](./05-ownership/)**: Defining boundaries, navigating developer vs. operations dynamics, and building a production-first culture.
-- **[99. Principles](./99-principles/)**: Core engineering values and operational safety principles that underline everything else.
+- **[01. Incident Response](./01-incident-response/)**: Structuring the response, defining objective severity, and coordinating effectively under pressure.
+- **[02. Alerting](./02-alerting/)**: Building actionable signals, eliminating alert fatigue, and paging on symptoms rather than causes.
+- **[03. Postmortems](./03-postmortems/)**: Driving organizational learning through blameless RCAs and concrete action items.
+- **[04. Operational Load](./04-operational-load/)**: Managing toil, capacity planning, running game days, and protecting the on-call rotation.
+- **[05. Ownership](./05-ownership/)**: Defining service boundaries, navigating dev vs. ops dynamics, and enforcing a production-first culture.
+- **[99. Principles](./99-principles/)**: The core engineering values and release practices that underpin reliable systems.
 
 ## Philosophy
 
-Reliability isn't a product you can buy or a tool you can deploy. It's a property of the socio-technical system—the combination of software, infrastructure, and the humans who operate them.
+Reliability is not a SaaS product you can buy. It is an emergent property of your socio-technical system—the intersection of your software, your infrastructure, and the engineers who operate them.
 
-Tools change. Cloud providers change. But the fundamental challenges of operating complex systems—coordinating humans, defining boundaries, maintaining psychological safety, and managing risk—remain constant.
+Tools and cloud providers change. The fundamental challenges of operating complex systems—coordinating humans, defining clear boundaries, maintaining psychological safety, and managing risk—do not.
